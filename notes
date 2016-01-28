@@ -1,0 +1,5 @@
+resize .vmdk in virtualbox:
+
+VBoxManage clonehd "source.vmdk" "cloned.vdi" --format vdi
+VBoxManage modifyhd "cloned.vdi" --resize 51200
+VBoxManage clonehd "cloned.vdi" "resized.vmdk" --format vmdk
